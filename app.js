@@ -2,6 +2,7 @@ const topographicalSurfacePlot = document.querySelector('#topographical-plot');
 const topographicalSurfacePlotWithContours = document.querySelector('#topographical-plot-with-contours');
 const multipleTopographicalPlots = document.querySelector('#multiple-topographical-plots');
 
+// topographical surface plot
 Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err,rows) {
   function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
@@ -30,6 +31,7 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs
   Plotly.newPlot(topographicalSurfacePlot, data, layout);
 })
 
+// topographical surface plot with projected contours
 Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows) {
   function unpack(rows, key) {
     return rows.map(function(row) {
@@ -80,4 +82,23 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs
   Plotly.newPlot(topographicalSurfacePlotWithContours, data, layout)
 })
 
+// multiple 3D surface plots
+z1 = [
+  [8.83, 8.89, 8.81, 8.87, 8.90, 8.87],
+  [8.89, 8.94, 8.85, 8.94, 8.96, 8.92],
+  [8.84, 8.90, 8.82, 8.92, 8.93, 8.91],
+  [8.79, 8.85, 8.79, 8.90, 8.94, 8.92],
+  [8.79, 8.88, 8.81, 8.90, 8.95, 8.92],
+  [8.80, 8.82, 8.78, 8.91, 8.94, 8.92],
+  [8.75, 8.78, 8.77, 8.91, 8.95, 8.92],
+  [8.80, 8.80, 8.77, 8.91, 8.95, 8.94],
+  [8.74, 8.81, 8.76, 8.93, 8.98, 8.99],
+  [8.89, 8.99, 8.92, 9.10, 9.13, 9.11],
+  [8.97, 8.97, 8.91, 9.09, 9.11, 9.12],
+  [9.04, 9.08, 9.05, 9.25, 9.28, 9.27],
+  [9.00, 9.04, 9.00, 9.27, 8.81, 9.15],
+  [8.99, 8.99, 9.18, 9.23, 9.20, 9.19],
+  [8.93, 8.97, 8.97, 9.18, 9.20, 9.18]
+];
 
+z2 = [];
