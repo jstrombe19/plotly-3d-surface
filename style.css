@@ -1,9 +1,10 @@
 .surface-plot {
-  width: 650px;
-  height: 500px;
+  width: 750px;
+  height: 600px;
 }
 
 #topographical-plots {
   display: flexbox;
   flex-direction: row;
+  flex-wrap: wrap;
 }
